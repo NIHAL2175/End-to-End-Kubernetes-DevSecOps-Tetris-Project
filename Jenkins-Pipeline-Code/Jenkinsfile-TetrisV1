@@ -24,6 +24,7 @@ pipeline {
                         sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Tetris \
                         -Dsonar.projectKey=Tetris '''
                     }
+    
                 }
             }
         }
