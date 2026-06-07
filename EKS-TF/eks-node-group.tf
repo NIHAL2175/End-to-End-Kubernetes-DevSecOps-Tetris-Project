@@ -6,12 +6,12 @@ resource "aws_eks_node_group" "eks-node-group" {
 
 
   scaling_config {
-    desired_size = 1
-    max_size     = 1
+    desired_size = 2
+    max_size     = 3
     min_size     = 1
   }
 
-  instance_types = ["t3.micro"]
+  instance_types = ["t3a.medium"]
   disk_size      = 20
 
   depends_on = [
