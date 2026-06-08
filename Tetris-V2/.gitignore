@@ -1,5 +1,9 @@
-node_modules
-build
-.terraform
-.terraform*
-terraform.*
+node_modules/
+build/
+
+.terraform/
+**/.terraform/
+
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
