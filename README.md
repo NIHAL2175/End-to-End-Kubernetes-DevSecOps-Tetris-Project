@@ -271,7 +271,7 @@ EKS Cluster (Before)          EKS Cluster (After)
 
 **NIHAL N** — DevSecOps & Cloud Engineer
 
-![GitHub](https://img.shields.io/badge/GitHub-NIHAL2175-black?logo=github) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nihal%20N-blue?logo=linkedin)](https://www.linkedin.com/in/nihal-n-cse/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nihal%20N-blue?logo=linkedin)](https://www.linkedin.com/in/nihal-n-cse/)
 
 ---
 
