@@ -1,24 +1,32 @@
+<div align="center">
+
 # 🚀 End-to-End DevSecOps Kubernetes Project 🌐
 
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-Mastery-brightgreen) ![Kubernetes](https://img.shields.io/badge/Kubernetes-K8s-blueviolet) ![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-orange) ![ArgoCD](https://img.shields.io/badge/ArgoCD-GitOps-blue) ![Docker](https://img.shields.io/badge/Docker-Container-blue) ![Terraform](https://img.shields.io/badge/Terraform-IaC-9cf)
 
+
 ![Infrastructure Diagram](assets/Infra.gif)
 
-## Directories 📂
-1. **EKS-TF:** Explore Terraform scripts for deploying EKS clusters on AWS.
-2. **Jenkins-Pipeline-Code:** Jenkins pipeline code for automated CI/CD.
-3. **Jenkins-Server-TF:** Terraform scripts for provisioning Jenkins servers on AWS EC2.
-4. **Manifest-file:** Kubernetes manifest files for Tetris application deployment.
-5. **Tetris-V1:** Initial version of the Tetris game application.
-6. **Tetris-V2:** Enhanced version of the Tetris game application.
+</div>
+
+---
+
+## 📂 Directories
+
+| Folder | Description |
+|---|---|
+| 📁 **EKS-TF** | Terraform scripts for deploying EKS clusters on AWS |
+| 📁 **Jenkins-Pipeline-Code** | Jenkins pipeline code for automated CI/CD |
+| 📁 **Jenkins-Server-TF** | Terraform scripts for provisioning Jenkins servers on AWS EC2 |
+| 📁 **Manifest-file** | Kubernetes manifest files for Tetris application deployment |
+| 📁 **Tetris-V1** | Initial version of the Tetris game application |
+| 📁 **Tetris-V2** | Enhanced version of the Tetris game application |
 
 ---
 
 ## 🧠 Project Overview
 
-This project demonstrates a **production-grade DevSecOps pipeline** built from the ground up — combining **security**, **automation**, and **cloud-native deployment** into a single seamless workflow. Using a fun Tetris game as the application, it walks through every layer of a modern software delivery pipeline — from writing code to deploying on Kubernetes with full security scanning at every step.
-
-> 💡 **The Goal:** Ship secure, containerized applications to AWS EKS automatically — with zero manual intervention after a code push.
+This project demonstrates a **Production-grade DevSecOps pipeline** built from the ground up — combining **security**, **automation** and **cloud-native deployment** into a single seamless workflow. Using a fun Tetris game as the application, it walks through every layer of a modern software delivery pipeline — from writing code to deploying on Kubernetes with full security scanning at every step.
 
 ---
 
@@ -74,13 +82,13 @@ Developer Push
 
 ## 🔐 Security at Every Stage (DevSecOps)
 
-Security isn't an afterthought here — it's **baked into every step**:
-
-- 🔍 **SonarQube** — Catches code smells, bugs, and vulnerabilities before build
-- ✅ **Quality Gate** — Pipeline fails automatically if code quality drops below threshold
-- 🛡️ **OWASP Dependency-Check** — Flags known CVEs in third-party packages
-- 🔬 **Trivy FS Scan** — Scans the project filesystem before Docker build
-- 🐳 **Trivy Image Scan** — Scans the final Docker image for OS & library vulnerabilities
+| Stage | Tool | What it Does |
+|---|---|---|
+| 🔍 Code Analysis | SonarQube | Catches code smells, bugs, and vulnerabilities before build |
+| ✅ Quality Gate | SonarQube | Pipeline fails automatically if code quality drops below threshold |
+| 🛡️ Dependency Scan | OWASP | Flags known CVEs in third-party packages |
+| 🔬 Filesystem Scan | Trivy | Scans the project filesystem before Docker build |
+| 🐳 Image Scan | Trivy | Scans the final Docker image for OS & library vulnerabilities |
 
 ---
 
@@ -102,25 +110,23 @@ Security isn't an afterthought here — it's **baked into every step**:
 
 ## 🌍 Infrastructure Provisioning
 
-### Jenkins Server (EC2)
+### 🖥️ Jenkins Server (EC2)
 ```bash
 cd Jenkins-Server-TF
 terraform init
 terraform apply
 ```
-Provisions an EC2 instance pre-configured with Jenkins, Docker, SonarQube, and Trivy.
 
-### EKS Cluster
+### ☸️ EKS Cluster
 ```bash
 cd EKS-TF
 terraform init
 terraform apply
 ```
-Provisions a production-ready AWS EKS cluster with managed node groups.
 
 ---
 
-## 🎮 Application — Tetris V1 (Detailed)
+## 🎮 Application — Tetris (V1)
 
 ### 📌 What is Tetris V1?
 Tetris V1 is the **first and base version** of the Tetris web application used in this project. It serves as the **initial deployment target** — the starting point of the entire DevSecOps pipeline. It is a fully playable, browser-based Tetris game built with **React.js** and containerized using Docker.
@@ -167,15 +173,15 @@ CMD ["nginx", "-g", "daemon off;"]
 - ArgoCD picks up the manifest change and rolls out the update automatically
 
 ### 🎯 Key Features of V1
-- Classic Tetris gameplay in the browser
-- Responsive design
-- Score tracking
-- Clean, minimal UI
-- Fully containerized and cloud-deployable
+- ✅ Classic Tetris gameplay in the browser
+- ✅ Responsive design
+- ✅ Score tracking
+- ✅ Clean, minimal UI
+- ✅ Fully containerized and cloud-deployable
 
 ---
 
-## 🎮 Application — Tetris V2 (Detailed)
+## 🎮 Application — Tetris (V2)
 
 ### 📌 What is Tetris V2?
 Tetris V2 is the **enhanced and upgraded version** of the Tetris application. It is used in this project to demonstrate a **real-world rolling update scenario** — simulating what happens when a development team ships a new feature release through the same DevSecOps pipeline without any downtime.
@@ -194,16 +200,15 @@ Tetris-V2/
 ```
 
 ### ⚙️ What's New in V2?
-Tetris V2 builds on V1 with the following improvements:
 
 | Feature | V1 | V2 |
 |---|---|---|
-| UI Design | Basic minimal UI | Polished, modern UI with better styling |
-| Game Levels | Single speed | Multiple difficulty levels |
-| Score System | Basic score | High score tracking & level multiplier |
-| Visual Effects | None | Improved animations & color themes |
-| Mobile Support | Limited | Better responsive design |
-| Branding | Generic | Custom project branding |
+| 🎨 UI Design | Basic minimal UI | Polished, modern UI with better styling |
+| 🎚️ Game Levels | Single speed | Multiple difficulty levels |
+| 🏆 Score System | Basic score | High score tracking & level multiplier |
+| ✨ Visual Effects | None | Improved animations & color themes |
+| 📱 Mobile Support | Limited | Better responsive design |
+| 🏷️ Branding | Generic | Custom project branding |
 
 ### 🐳 Dockerfile (V2)
 ```dockerfile
@@ -241,30 +246,37 @@ EKS Cluster (Before)          EKS Cluster (After)
 ```
 
 ### 🎯 Key Features of V2
-- All V1 features retained
-- Enhanced gameplay experience
-- Better visual design and animations
-- Demonstrates GitOps-driven rolling deployments
-- Production-ready upgrade scenario
+- ✅ All V1 features retained
+- ✅ Enhanced gameplay experience
+- ✅ Better visual design and animations
+- ✅ Demonstrates GitOps-driven rolling deployments
+- ✅ Production-ready upgrade scenario
 
 ---
 
 ## 📈 How It All Connects
 
-1. You push code → Jenkins triggers automatically
-2. Jenkins scans, builds, and pushes a new Docker image tagged `tetrisv1:BUILD_NUMBER`
-3. Jenkins updates `deployment-service.yml` with the new tag and pushes to GitHub
-4. ArgoCD detects the manifest change and deploys the new image to EKS
-5. Your app is live — securely, automatically, and traceable end-to-end 🎯
+```
+1️⃣  You push code          →   Jenkins triggers automatically
+2️⃣  Jenkins scans & builds →   New Docker image tagged tetrisv1:BUILD_NUMBER
+3️⃣  Jenkins updates YAML   →   deployment-service.yml pushed to GitHub
+4️⃣  ArgoCD detects change  →   Syncs new manifest to EKS
+5️⃣  App is live 🎯         →   Secure, automated, end-to-end traceable
+```
 
 ---
+
+<div align="center">
 
 ## 👨‍💻 Author
 
 **NIHAL N** — DevSecOps & Cloud Engineer
 
-![GitHub](https://img.shields.io/badge/GitHub-NIHAL2175-black?logo=github)
+![LinkedIn](https://www.linkedin.com/in/nihal-n-cse/)
 
 ---
 
-> ⭐ *If this project helped you learn DevSecOps, give it a star and share it with your team!*
+⭐ *If this project helped you learn DevSecOps, give it a star and share it with your team!*
+
+</div>
+```
