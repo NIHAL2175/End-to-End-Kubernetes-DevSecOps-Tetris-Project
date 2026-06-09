@@ -265,18 +265,16 @@ EKS Cluster (Before)          EKS Cluster (After)
 ```
 
 ---
-
 <div align="center">
 
 ## 👨‍💻 Author
 
 **NIHAL N** — DevSecOps & Cloud Engineer
 
-![LinkedIn](https://www.linkedin.com/in/nihal-n-cse/)
+![GitHub](https://img.shields.io/badge/GitHub-NIHAL2175-black?logo=github) [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nihal%20N-blue?logo=linkedin)](https://www.linkedin.com/in/nihal-n-cse/)
 
 ---
 
 ⭐ *If this project helped you learn DevSecOps, give it a star and share it with your team!*
 
 </div>
-```
