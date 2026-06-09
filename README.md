@@ -1,10 +1,6 @@
 # 🚀 End-to-End DevSecOps Kubernetes Project 🌐
-![DevSecOps](https://img.shields.io/badge/DevSecOps-Mastery-brightgreen)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blueviolet)
-![Jenkins](https://img.shields.io/badge/Jenkins-Automation-orange)
-![ArgoCD](https://img.shields.io/badge/ArgoCD-Continuous%20Delivery-blue)
-![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
-![Terraform](https://img.shields.io/badge/Terraform-Infrastructure%20as%20Code-9cf)
+
+![DevSecOps](https://img.shields.io/badge/DevSecOps-Mastery-brightgreen) ![Kubernetes](https://img.shields.io/badge/Kubernetes-K8s-blueviolet) ![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-orange) ![ArgoCD](https://img.shields.io/badge/ArgoCD-GitOps-blue) ![Docker](https://img.shields.io/badge/Docker-Container-blue) ![Terraform](https://img.shields.io/badge/Terraform-IaC-9cf)
 
 ![Infrastructure Diagram](assets/Infra.gif)
 
