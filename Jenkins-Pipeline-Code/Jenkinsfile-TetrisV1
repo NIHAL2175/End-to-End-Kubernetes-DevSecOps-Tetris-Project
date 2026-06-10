@@ -1,9 +1,13 @@
 pipeline {
     agent any
+    options {
+        timeout(time: 45, unit: 'MINUTES')
+        disableConcurrentBuilds()
+    }
     tools {
         nodejs 'nodejs'
     }
-    environment  {
+    environment {
         SCANNER_HOME=tool 'sonar-scanner'
     }
     stages {
@@ -18,13 +22,15 @@ pipeline {
             }
         }
         stage('Sonarqube Analysis') {
+            options { timeout(time: 15, unit: 'MINUTES') }
             steps {
                 dir('Tetris-V1') {
                     withSonarQubeEnv('sonar-server') {
-                        sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Tetris \
-                        -Dsonar.projectKey=Tetris '''
+                        sh ''' $SCANNER_HOME/bin/sonar-scanner \
+                        -Dsonar.projectName=Tetris \
+                        -Dsonar.projectKey=Tetris \
+                        -Dsonar.exclusions=**/node_modules/** '''
                     }
-    
                 }
             }
         }
@@ -43,6 +49,7 @@ pipeline {
             }
         }
         stage('OWASP Dependency-Check Scan') {
+            options { timeout(time: 15, unit: 'MINUTES') }
             steps {
                 dir('Tetris-V1') {
                     dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
@@ -61,7 +68,7 @@ pipeline {
             steps {
                 script {
                     dir('Tetris-V1') {
-                        withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
+                        withDockerRegistry(credentialsId: 'docker', url: 'https://index.docker.io/v1/') {
                             sh 'docker system prune -f'
                             sh 'docker build -t tetrisv1 .'
                         }
@@ -72,7 +79,7 @@ pipeline {
         stage("Docker Image Pushing") {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker') { 
+                    withDockerRegistry(credentialsId: 'docker', url: 'https://index.docker.io/v1/') {
                         sh 'docker tag tetrisv1 nihal2175/tetrisv1:${BUILD_NUMBER}'
                         sh 'docker push nihal2175/tetrisv1:${BUILD_NUMBER}'
                     }
@@ -108,7 +115,7 @@ pipeline {
                             git add deployment-service.yml
                             git commit -m "Update deployment Image to version ${BUILD_NUMBER}"
                             git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
-                                                    '''
+                        '''
                     }
                 }
             }
