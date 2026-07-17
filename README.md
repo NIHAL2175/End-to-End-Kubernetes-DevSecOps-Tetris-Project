@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 End-to-End DevSecOps Kubernetes Project 🌐
+# 🚀 End-to-End Kubernetes DevSecOps Project 🌐
 
 ![DevSecOps](https://img.shields.io/badge/DevSecOps-Mastery-brightgreen) ![Kubernetes](https://img.shields.io/badge/Kubernetes-K8s-blueviolet) ![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-orange) ![ArgoCD](https://img.shields.io/badge/ArgoCD-GitOps-blue) ![Docker](https://img.shields.io/badge/Docker-Container-blue) ![Terraform](https://img.shields.io/badge/Terraform-IaC-9cf)
 
